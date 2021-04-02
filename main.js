@@ -11,6 +11,7 @@
    let detail = document.getElementById('detail');
 
    if(input.value === ""){
+    alert('タイトルを入力してください。');
     return;
   }
 
