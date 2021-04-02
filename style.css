@@ -12,12 +12,11 @@ body {
 h1 {
   font-size: 4rem;
   font-weight: 700;
-  color: #d82b8a;
-  text-shadow: 3px 1px 0px #363435;
-  letter-spacing: 1px;
+  color: #131313;
   text-align: center;
   padding: 8px;
   margin-bottom: 32px;
+  font-style: italic;
 }
 
 .addition {
