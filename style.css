@@ -39,10 +39,24 @@ body {
   left: 10%;
 }
 
+@media screen and (min-width: 600px) {
+  .explanation .explanation-content {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
 .explanation .explanation-content p {
   font-size: 1.6rem;
   line-height: 1.5;
   margin-bottom: 8px;
+}
+
+@media screen and (min-width: 600px) {
+  .explanation .explanation-content p {
+    font-size: 2rem;
+  }
 }
 
 .explanation .explanation-content p span {
@@ -58,6 +72,12 @@ body {
   background-color: white;
   border-radius: 50%;
   z-index: 2;
+}
+
+@media screen and (min-width: 600px) {
+  .nav {
+    cursor: pointer;
+  }
 }
 
 .nav .nav-inner {
@@ -82,8 +102,15 @@ h1 {
   color: #cc8989;
   text-align: center;
   padding: 8px;
-  margin-bottom: 32px;
   font-style: italic;
+  margin-bottom: 32px;
+  margin-top: 24px;
+}
+
+@media screen and (min-width: 600px) {
+  h1 {
+    font-size: 5rem;
+  }
 }
 
 .addition {
@@ -105,11 +132,35 @@ h1 {
   font-size: 1.8rem;
 }
 
+@media screen and (min-width: 600px) {
+  .addition input {
+    width: 50%;
+  }
+}
+
 .addition textarea {
   display: block;
   margin: 0 auto;
   margin-bottom: 24px;
   font-size: 1.8rem;
+}
+
+@media screen and (min-width: 600px) {
+  .addition textarea {
+    width: 50%;
+  }
+}
+
+.addition button {
+  display: block;
+  margin: 0 auto;
+  width: 70px;
+}
+
+@media screen and (min-width: 600px) {
+  .addition button {
+    width: 100px;
+  }
 }
 
 .list {
@@ -179,11 +230,23 @@ ul li {
   padding: 2px;
 }
 
+@media screen and (min-width: 600px) {
+  .detailButton {
+    cursor: pointer;
+  }
+}
+
 .doneButton {
   display: inline-block;
   width: 70px;
   margin-left: 10px;
   border: 2px solid #fff;
   padding: 2px;
+}
+
+@media screen and (min-width: 600px) {
+  .doneButton {
+    cursor: pointer;
+  }
 }
 /*# sourceMappingURL=style.css.map */
