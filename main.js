@@ -29,8 +29,8 @@
   // 作られたすべてのliを配列として定義？
   const lists = document.querySelectorAll('li');
   [...lists].forEach((li) => {
-    if(li.className !== 'todo-content'){
-
+    // すでに追加されている項目には詳細、追加ボタンは追加しないように条件分岐
+    if(li.className !== 'todo-content done'  && li.className !== 'todo-content'){
       // 詳細ボタンと追加ボタンを生成
       let detailButton = document.createElement('div');
       let doneButton = document.createElement('div');
