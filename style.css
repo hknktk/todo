@@ -5,14 +5,81 @@ html {
 }
 
 body {
-  background-color: #eee3ce;
-  font-family: 'Merriweather','Sawarabi Mincho',sans-serif;
+  background-color: black;
+  font-family: "Merriweather", "Sawarabi Mincho", sans-serif;
+}
+
+.explanation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  z-index: 1;
+  overflow-y: hidden;
+  -webkit-transform: translateY(-20%);
+          transform: translateY(-20%);
+  -webkit-transition: 1s;
+  transition: 1s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.explanation.show {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: none;
+          transform: none;
+}
+
+.explanation .explanation-content {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+}
+
+.explanation .explanation-content p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.explanation .explanation-content p span {
+  color: #c92121;
+}
+
+.nav {
+  position: fixed;
+  right: 5%;
+  top: 5%;
+  width: 45px;
+  height: 45px;
+  background-color: white;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.nav .nav-inner {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: 2rem;
+}
+
+.nav .nav-text {
+  position: absolute;
+  bottom: 15%;
+  width: 100%;
+  text-align: center;
 }
 
 h1 {
   font-size: 4rem;
   font-weight: 700;
-  color: #131313;
+  color: #cc8989;
   text-align: center;
   padding: 8px;
   margin-bottom: 32px;
@@ -28,6 +95,7 @@ h1 {
   display: block;
   margin-bottom: 8px;
   font-size: 2rem;
+  color: #fff;
 }
 
 .addition input {
@@ -55,16 +123,15 @@ h1 {
   height: 0px;
   margin: 0 auto;
   margin-top: 5px;
-  color: #6d6565;
+  color: #da62a4;
   font-size: 1.8rem;
-  border: 1px solid #333;
   padding: 0px;
   opacity: 0;
   visibility: hidden;
   -webkit-transform: translateY(-10px);
           transform: translateY(-10px);
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .list p.active {
@@ -85,6 +152,8 @@ ul li {
   display: block;
   font-size: 2.2rem;
   padding: 8px;
+  color: #fff;
+  border-bottom: 1px solid #5ac6e7;
 }
 
 .done {
@@ -94,19 +163,19 @@ ul li {
 
 .done .detailButton {
   opacity: 1;
-  color: #333;
+  color: #fff;
 }
 
 .done .doneButton {
   opacity: 1;
-  color: #333;
+  color: #fff;
 }
 
 .detailButton {
   display: inline-block;
   width: 70px;
   margin-left: 10px;
-  border: 1px solid #333;
+  border: 2px solid #fff;
   padding: 2px;
 }
 
@@ -114,7 +183,7 @@ ul li {
   display: inline-block;
   width: 70px;
   margin-left: 10px;
-  border: 1px solid #333;
+  border: 2px solid #fff;
   padding: 2px;
 }
 /*# sourceMappingURL=style.css.map */

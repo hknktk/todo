@@ -1,39 +1,48 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
-  <link rel="stylesheet" href="style.css">
-  <title>ToDo練習</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://meyerweb.com/eric/tools/css/reset/reset.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>ToDo練習</title>
+  </head>
+  <body>
+    <div class="explanation" id="explanation">
+      <div class="explanation-content">
+        <p>1.<span>タイトル欄</span>にタスクの見出しを入力。</p>
+        <p>2.<span>詳細欄</span>には日付や具体的内容を入力。</p>
+        <p>3.<span>追加ボタン</span>をクリック。</p>
+        <p>4.入力した内容が<span>ページ下部</span>に表示される。</p>
+        <p>5.詳細を表示するには<span>詳細ボタン</span>をクリック。</p>
+        <p>6.タスクが完了したら<span>完了ボタン</span>をクリック。</p>
+      </div>
+    </div>
 
-  <h1>ToDoList</h1>
+    <h1>ToDoList</h1>
 
-  <div class="addition">
-    <label for="new-todo">タイトル</label>
-    <input id="new-todo" type="text">
+    <nav class="nav" id="nav">
+      <div class="nav-inner" id="nav-inner">？</div>
+      <p class="nav-text" id="nav-text">使い方</p>
+    </nav>
 
-    <label for="detail">詳細</label>
-    <textarea name="detail" id="detail" cols="30" rows="10"></textarea>
-    <button id="add-button">追加</button>
-  </div>
+    <div class="addition">
+      <label for="new-todo">タイトル</label>
+      <input id="new-todo" type="text" />
 
-  <div class="list" id="list">
+      <label for="detail">詳細</label>
+      <textarea name="detail" id="detail" cols="30" rows="10"></textarea>
+      <button id="add-button">追加</button>
+    </div>
 
-    <ul></ul>
-    
-    
+    <div class="list" id="list">
+      <ul></ul>
+    </div>
 
-  </div>
-
-
-
-  
-
-
-  <script src="main.js"></script>
-</body>
+    <script src="main.js"></script>
+  </body>
 </html>
