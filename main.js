@@ -40,9 +40,9 @@
 
         // 詳細ボタンのクリックイベント
         detailButton.addEventListener("click", () => {
-          if (li.className === "todo-content done") {
-            return;
-          }
+          // if (li.className === "todo-content done") {
+          //   return;
+          // }
 
           detailText.classList.toggle("active");
 
@@ -92,30 +92,28 @@
     detail.value = "";
   });
 
+  const nav = document.getElementById("nav");
+  const nav_inner = document.getElementById("nav-inner");
+  const nav_text = document.getElementById("nav-text");
+  const explanation = document.getElementById("explanation");
 
-  const nav = document.getElementById('nav');
-  const nav_inner = document.getElementById('nav-inner');
-  const nav_text = document.getElementById('nav-text');
-  const explanation = document.getElementById('explanation');
+  nav.addEventListener("click", () => {
+    explanation.classList.toggle("show");
 
-  nav.addEventListener('click', () => {
-    explanation.classList.toggle('show');
-
-    if(nav_inner.innerHTML === "？"){
+    if (nav_inner.innerHTML === "？") {
       nav_inner.innerHTML = "×";
       nav_inner.style.fontSize = "3rem";
       nav_inner.style.top = "5%";
-
-    }else{
+    } else {
       nav_inner.innerHTML = "？";
       nav_inner.style.fontSize = "2rem";
       nav_inner.style.top = "10%";
     }
 
-    if(nav_text.innerHTML === "使い方"){
+    if (nav_text.innerHTML === "使い方") {
       nav_text.innerHTML = "閉じる";
-    }else{
+    } else {
       nav_text.innerHTML = "使い方";
     }
-  })
+  });
 }
