@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital@1&family=Sawarabi+Mincho&display=swap");
 html {
   font-size: 62.5%;
@@ -135,6 +136,7 @@ h1 {
 @media screen and (min-width: 600px) {
   .addition input {
     width: 50%;
+    max-width: 300px;
   }
 }
 
@@ -148,6 +150,7 @@ h1 {
 @media screen and (min-width: 600px) {
   .addition textarea {
     width: 50%;
+    max-width: 300px;
   }
 }
 
@@ -163,37 +166,6 @@ h1 {
   }
 }
 
-.list {
-  width: 90%;
-  margin: 0 auto;
-  min-height: 500px;
-}
-
-.list p {
-  width: 90%;
-  height: 0px;
-  margin: 0 auto;
-  margin-top: 5px;
-  color: #da62a4;
-  font-size: 1.8rem;
-  padding: 0px;
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transform: translateY(-10px);
-          transform: translateY(-10px);
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-.list p.active {
-  min-height: 30px;
-  opacity: 1;
-  visibility: visible;
-  -webkit-transform: none;
-          transform: none;
-  padding: 8px;
-}
-
 ul {
   width: 100%;
   text-align: center;
@@ -207,17 +179,26 @@ ul li {
   border-bottom: 1px solid #5ac6e7;
 }
 
-.done {
-  text-decoration: line-through;
+li.done {
   color: #e02f2f;
+  position: relative;
 }
 
-.done .detailButton {
+li.done::before {
+  content: "済";
+  position: absolute;
+  left: 5%;
+  top: 45%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+li.done .detailButton {
   opacity: 1;
   color: #fff;
 }
 
-.done .doneButton {
+li.done .doneButton {
   opacity: 1;
   color: #fff;
 }
@@ -248,5 +229,36 @@ ul li {
   .doneButton {
     cursor: pointer;
   }
+}
+
+.list {
+  width: 90%;
+  margin: 0 auto;
+  min-height: 500px;
+}
+
+.list p {
+  width: 90%;
+  height: 0px;
+  margin: 0 auto;
+  margin-top: 5px;
+  color: white;
+  font-size: 1.8rem;
+  padding: 0px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.list p.active {
+  min-height: 30px;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: none;
+          transform: none;
+  padding: 8px;
 }
 /*# sourceMappingURL=style.css.map */
