@@ -6,7 +6,7 @@ html {
 }
 
 body {
-  background-color: black;
+  background-color: #fff;
   font-family: "Merriweather", "Sawarabi Mincho", sans-serif;
 }
 
@@ -70,7 +70,9 @@ body {
   top: 5%;
   width: 45px;
   height: 45px;
-  background-color: white;
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #333;
   border-radius: 50%;
   z-index: 2;
 }
@@ -83,7 +85,7 @@ body {
 
 .nav .nav-inner {
   position: absolute;
-  top: 10%;
+  top: 15%;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -93,7 +95,8 @@ body {
 .nav .nav-text {
   position: absolute;
   bottom: 15%;
-  width: 100%;
+  left: 4px;
+  width: 80%;
   text-align: center;
 }
 
@@ -122,8 +125,9 @@ h1 {
 .addition label {
   display: block;
   margin-bottom: 8px;
-  font-size: 2rem;
-  color: #fff;
+  font-size: 2.5rem;
+  color: #cc8989;
+  font-weight: 700;
 }
 
 .addition input {
@@ -175,7 +179,7 @@ ul li {
   display: block;
   font-size: 2.2rem;
   padding: 8px;
-  color: #fff;
+  color: #333;
   border-bottom: 1px solid #5ac6e7;
 }
 
@@ -195,19 +199,19 @@ li.done::before {
 
 li.done .detailButton {
   opacity: 1;
-  color: #fff;
+  color: #333;
 }
 
 li.done .doneButton {
   opacity: 1;
-  color: #fff;
+  color: #333;
 }
 
 .detailButton {
   display: inline-block;
   width: 70px;
   margin-left: 10px;
-  border: 2px solid #fff;
+  border: 2px solid #333;
   padding: 2px;
 }
 
@@ -221,7 +225,7 @@ li.done .doneButton {
   display: inline-block;
   width: 70px;
   margin-left: 10px;
-  border: 2px solid #fff;
+  border: 2px solid #333;
   padding: 2px;
 }
 
@@ -242,7 +246,7 @@ li.done .doneButton {
   height: 0px;
   margin: 0 auto;
   margin-top: 5px;
-  color: white;
+  color: #333;
   font-size: 1.8rem;
   padding: 0px;
   opacity: 0;
